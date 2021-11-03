@@ -1,5 +1,7 @@
 fn main() {
-    let city_names = vec!["Pythonia", "Javasburg", "C by the Sea", "Rustville"];
+    let mut city_names = vec!["Pythonia", "Javasburg", "C by the Sea", "Rustville"];
+
+    city_names.pop();
 
     let last_city = "👉 TODO Use .pop() to remove the last city from the list.";
     // 💡 TIP: Here's an example of pattern matching syntax:
@@ -18,9 +20,14 @@ fn main() {
     // 👉 TODO now that we've done that, use `.push()` to put last_city
     //    back in `city_names`.
 
+    city_names.push("Rustville");
+
     println!("Here is the full list of cities:");
     // 👉 TODO print each of the city names.
-    //
+    for e in city_names.iter() {
+        println!("{}", e);
+    }
+
     // 💡 TIP: Here's an example of `for` loop syntax:
     //
     //     for my_element in my_vec.iter() { ... }
