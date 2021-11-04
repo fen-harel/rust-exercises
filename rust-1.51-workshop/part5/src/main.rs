@@ -1,9 +1,9 @@
 fn main() {
     let numbers = vec![2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24];
 
-    let sum_of_nums = sum(numbers);
-    let product_of_nums = 0; // 👉 TODO call product() and put answer here
-    let average_of_nums = 0; // 👉 TODO call average() and put answer here
+    let sum_of_nums = sum(numbers.clone());
+    let product_of_nums = product(numbers.clone()); // 👉 TODO call product() and put answer here
+    let average_of_nums = average(numbers.clone()); // 👉 TODO call average() and put answer here
 
     // 💡 TIP: You'll get a compile error. Here are two ways you can fix it:
     //
