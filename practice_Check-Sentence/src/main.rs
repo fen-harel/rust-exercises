@@ -15,7 +15,7 @@ fn first_letter(s: &String) -> usize {
     let bytes = s.as_bytes();
 
     for (i , &item) in bytes.iter().enumerate() {
-        if i == b' ' {          // b' ' = byte literal
+        if item == b' ' {          // b' ' = byte literal
             return i;
         }
     }
