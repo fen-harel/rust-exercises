@@ -16,40 +16,11 @@ fn first_letter(s: &String) -> usize {
 
     for (i , &item) in bytes.iter().enumerate() {
         if item == b' ' {          // b' ' = byte literal
-            return i;
+            if i = 0
         }
     }
 
     s.len()
-}
-
-enum UpperCase {
-    A,
-    B,
-    C,
-    D,
-    E,
-    F,
-    G,
-    H,
-    I,
-    J,
-    K,
-    L,
-    M,
-    N,
-    O,
-    P,
-    Q,
-    R,
-    S,
-    T,
-    U,
-    V,
-    W,
-    X,
-    Y,
-    Z,
 }
 
 fn main() {
