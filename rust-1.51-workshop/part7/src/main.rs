@@ -5,9 +5,9 @@ fn main() {
     // here, without using .clone() or changing what those functions return.
     //
     // 💡 TIP: You can do this by accepting a slice type - e.g. &[i64]
-    let sum_of_nums = 0;
-    let product_of_nums = 0;
-    let average_of_nums = 0;
+    let sum_of_nums = sum(&numbers);
+    let product_of_nums = product(&numbers);
+    let average_of_nums = average(&numbers);
 
     println!("Sum of these numbers: {}", sum_of_nums);
     println!("Product of these numbers: {}", product_of_nums);
@@ -29,7 +29,7 @@ fn main() {
     }
 }
 
-fn sum(numbers: Vec<i64>) -> i64 {
+fn sum(numbers: &Vec<i64>) -> i64 {
     let mut total = 0;
 
     for num in numbers.iter() {
@@ -39,7 +39,7 @@ fn sum(numbers: Vec<i64>) -> i64 {
     total
 }
 
-fn product(numbers: Vec<i64>) -> i64 {
+fn product(numbers: &Vec<i64>) -> i64 {
     let mut total = 1;
 
     for num in numbers.iter() {
@@ -49,7 +49,7 @@ fn product(numbers: Vec<i64>) -> i64 {
     total
 }
 
-fn average(numbers: Vec<i64>) -> i64 {
+fn average(numbers: &Vec<i64>) -> i64 {
     let length = numbers.len() as i64;
 
     sum(numbers) / length
