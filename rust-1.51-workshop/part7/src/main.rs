@@ -14,7 +14,7 @@ fn main() {
     println!("Average of these numbers: {}", average_of_nums);
 
     let other_numbers = vec![1, 2, 3, 4, 5, 6];
-    let (slice1, slice2) = first_three(numbers, other_numbers);
+    let (slice1, slice2) = first_three(&numbers, &other_numbers);
 
     println!("The first three elements in `slice1` are:");
 
@@ -55,9 +55,11 @@ fn average(numbers: &Vec<i64>) -> i64 {
     sum(numbers) / length
 }
 
-fn first_three(numbers1: Vec<i64>, numbers2: Vec<i64>) -> (Vec<i64>, Vec<i64>) {
+fn first_three<'a>(numbers1: &'a Vec<i64>, numbers2: &'a Vec<i64>) -> (&'a [i64], &'a [i64]) {
     // 👉 TODO Return two slices, one containing the first 3 elements in
     //    numbers1, and the other containing the first 3 elements in numbers2.
+        let slice_1 = &numbers1[0..3];
+        let slice_2 = &numbers2[0..3];
     //
     // 💡 TIP 1: You can get slices like this using this syntax:
     //
@@ -76,5 +78,5 @@ fn first_three(numbers1: Vec<i64>, numbers2: Vec<i64>) -> (Vec<i64>, Vec<i64>) {
     //        fn first_three<'a, 'b>
     //
     //        fn first_three<'a, 'b, 'c>
-    (numbers1, numbers2)
+    (slice_1, slice_2)
 }
